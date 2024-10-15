@@ -354,7 +354,7 @@ func isAllDigits(s string) bool {
 }
 
 func fetchData(ctx context.Context, collectionName, filterData string) (json.RawMessage, error) {
-	apiURL := fmt.Sprintf("http://localhost:8000/detail-data?q=%s&filter=%s",
+	apiURL := fmt.Sprintf("http://ddns.sector.co.id:8005/detail-data?q=%s&filter=%s",
 		url.QueryEscape(collectionName), url.QueryEscape(filterData))
 
 	req, err := http.NewRequestWithContext(ctx, "GET", apiURL, nil)
